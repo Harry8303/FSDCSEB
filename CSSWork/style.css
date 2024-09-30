@@ -1,0 +1,23 @@
+.container{
+    background-color: gray;
+    height: 400px;;
+    width: 500px;
+    border: 2px solid red;
+}
+
+.child1,.child2,.child3{
+    border : 2px solid green;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin:20px;
+}
+.child1{
+    background-color: bisque;
+}
+.child2{
+    background-color: rgb(44, 196, 120);
+}
+.child3{
+    background-color: rgb(73, 38, 176);
+}
