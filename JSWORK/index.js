@@ -133,7 +133,25 @@
 
 // console.log(data);
 console.log("Hello World");
-let parent=document.getElementsByClassName("parent");
+let parent = document.getElementsByClassName("parent");
 console.log(parent);
-parent[0].innerText="data has changed";
-parent[0].innerHTML="<h2 style=color:red>data has changed</h2>";
+if (parent.length > 0) {
+    parent[0].innerText = "data has changed";
+    parent[0].innerHTML = "<h2 style='color:red'>data has changed</h2>";
+}
+
+let div = document.getElementsByTagName("div");
+if (div.length > 0) {
+    div[0].innerHTML = "hello.js";
+    div[0].innerHTML = "<h2>Hello JS</h2>";
+    const h1 = document.createElement("h1");
+    console.log(h1);
+    h1.innerText = "ABES ENGINEERING COLLEGE";
+    console.log(h1);
+    h1.style.backgroundColor = "cyan";
+    h1.style.padding = "20px";
+    h1.style.marginLeft = "300px";
+    div[0].appendChild(h1);
+}
+img.src="C:\Users\Arpit\OneDrive\Desktop\FSD\FSDCSEB\images\img1.jpg";
+console.log(img);
