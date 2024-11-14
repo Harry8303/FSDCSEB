@@ -1,7 +1,23 @@
 .icard{
-background-color:blueviolet ;
-height:200px ;
-border: 5px solid red;
-width: 150px;
+background-color:rgb(43, 226, 162) ;
+height:300px ;
+border: 10px solid rgb(27, 25, 25);
+width: 200px;
 margin: 5px;
 }
+/* student.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: grey;
+  }
+  
+  #root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
