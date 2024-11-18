@@ -1,72 +1,78 @@
-import React from 'react';
+import React from 'react'
 import Student from './Student';
-import './student.css'
-
-function HelloWorld() {
-  const h1 = <h1>Hello World!</h1>
-  const mystyle  ={
-    color:'black',
-    backgroundColor : 'black'
+// import UseStudentState from './UserStudentState';
+import ImgManipulate from './imgmanipulate';
+function App()
+{
+  const h1=<h1>hello world</h1>;
+  const mystyle={
+    color:'red',
+    backgroundColor:'white'
+  }
+  const studentdata=[{
+    college:"ABES engineering college",
+    name:"Harshit luanda",
+    branch:"cs m",
+    roll:"200",
+    section:"A"
+    
+  },{
+    college:"gl engineering college",
+    name:"Harshit jindabad",
+    branch:"cs c",
+    roll:"2",
+    section:"B"
+  },{
+    college:"Akg engineering college",
+    name:"Harshit bro",
+    branch:"cs b",
+    roll:"234777",
+    section:"b"
   }
 
-  const StudentData = [{
-    college : "ABES Engineering College",
-    Name : "Harsh",
-    branch : "CSE",
-    roll : 1,
-    section : "B"}
-  ,
-  {
-    college : "ABES Engineering College",
-    Name : "Prabhat",
-    branch : "CSE",
-    roll : 3,
-    section : "B"
-  },
-  {
-    college : "ABES Engineering College",
-    Name : "Verma",
-    branch : "CSE",
-    roll : 2,
-    section : "B"
-  }
+  
 ]
   return (
-    <div style={{backgroundColor : 'grey' }}>
-      {h1}
-      <div style={mystyle}>
-        ABES Engineering College
-      </div>
-      <div style={{display : 'flex'}}>
-         {
-          StudentData.map(
-            (ele) => {
-              return <Student data = {ele} />
-            }
-          )         
-         }
-        {/*<Student 
-        name = 'Harshil' 
-        pic = {<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100} />}
-        branch = ' CSE' 
-        roll = '2200320100069' 
-        section='B'/>
+    <div><h2>hello using use statement</h2>
+    <ImgManipulate></ImgManipulate>
+    </div>
+    
 
-      <Student college = 'ABES Enginerring College' 
-        name = 'Prabhat' 
-        pic = {<img src='https://media.istockphoto.com/id/1369754239/photo/university-student-in-white-background-stock-photo.jpg?s=612x612&w=0&k=20&c=LjFVDfjusWBjYTNliHV9DyXfApPGc8DmgBGEtfVgQ0Q=' height={100} width={100} />}
-        branch = ' CSE' 
-        roll = '2200320100112' 
-        section='B'/>
+    // <div style={{backgroundColor:'blueviolet'}}>
+    //   {h1}
+    //   <div style={mystyle}> 
+    //     ABES Engineering college
+    //   </div>
+    //   <div style={{display:"flex"}}>
+    //     {
+    //       studentdata.map(
+    //         (ele)=>{
+    //          return <Student data ={ele}/>
+    //         }
+    //       )
+    //     }
+    //     {/* <Student college="ABES ENGINEERING COLLEGE"
+    //     name="harshit"
+    //     branch="cse"
+    //     Roll="12"
+    //     section="a" 
+    //     pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100}/>}
+    //    />
 
-      <Student college = 'ABES Enginerring College' 
-        name = 'Priyanshu' 
-        pic = {<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ47HILWuUgVTqOxL-lJ0Jdvo9tpUNIP5X5Q&s' height={100} width={100} />}
-        branch = ' CSE' 
-        roll = '2200320100169' 
-        section='B'/>*/}
-        </div>
-      </div>
-  );
+    //     <Student college="ABES ENGINEERING COLLEGE"
+    //     name="sharma"
+    //     branch="cse"
+    //     Roll="13"
+    //     section="b" />
+    //      <Student college="ABES ENGINEERING COLLEGE"
+    //     name="sharma"
+    //     branch="cse"
+    //     Roll="13"
+    //     section="a" />*/}
+
+    //   </div> 
+
+    // </div>
+  )
 }
-export default HelloWorld;
+export default App
