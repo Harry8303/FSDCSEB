@@ -2,14 +2,16 @@ import React, { useState } from "react";
 
 function UseStudentState() {
   const [count, setCount] = useState(20);
-function doIncrement(){
-  console.log("Hi Inside do increment");
-  setCount(count + 1);
-}
-function doDecrement(){
-  console.log("Hi Inside do increment");
-  setCount(count - 1);
-}
+
+  function doIncrement() {
+    console.log("Incrementing count");
+    setCount(count + 1);
+  }
+
+  function doDecrement() {
+    console.log("Decrementing count");
+    setCount(count - 1);
+  }
 
   return (
     <div
@@ -26,11 +28,15 @@ function doDecrement(){
     >
       {count}
       <div>
-        <button id='btn' onClick={doIncrement}  style={{backgroundColor:'cyan'}}>Increment Counter</button>
-        <button id='btn' onClick={doDecrement}  style={{backgroundColor:'cyan'}}>Decrement Counter</button>
+        <button onClick={doIncrement} style={{ backgroundColor: 'cyan' }}>
+          Increment Counter
+        </button>
+        <button onClick={doDecrement} style={{ backgroundColor: 'cyan' }}>
+          Decrement Counter
+        </button>
       </div>
-
     </div>
   );
 }
+
 export default UseStudentState;

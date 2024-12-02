@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import cat from "./cat.jpg";
 
@@ -6,25 +5,29 @@ function ImageManipulation() {
   const [height, setHeight] = useState(100);
   const [width, setWidth] = useState(100);
   const [rotate, setRotate] = useState(0);
-  const [bgColor, setBgColor] = useState("#ff9999");
+  const [red, setRed] = useState(255);
+  const [green, setGreen] = useState(153);
+  const [blue, setBlue] = useState(153);
 
   function enhanceHeight() {
-    setHeight(height + 30);
+    setHeight((prevHeight) => prevHeight + 30);
   }
 
   function enhanceWidth() {
-    setWidth(width + 30);
+    setWidth((prevWidth) => prevWidth + 30);
   }
 
   function rotateImage() {
-    setRotate(rotate + 30);
+    setRotate((prevRotate) => prevRotate + 30);
   }
 
   function changeBackground() {
-    const colors = ["#ff9999", "#99ff99", "#9999ff", "#ffff99","red"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    setBgColor(randomColor);
+    setRed(Math.floor(Math.random() * 256));
+    setGreen(Math.floor(Math.random() * 256));
+    setBlue(Math.floor(Math.random() * 256));
   }
+
+  const bgColor = `rgb(${red}, ${green}, ${blue})`;
 
   return (
     <div
@@ -33,8 +36,8 @@ function ImageManipulation() {
         height: "300px",
         width: "400px",
         margin: "20px auto",
-        backgroundColor: bgColor,
-        textAlign: "center", 
+        backgroundColor: "grey", 
+        textAlign: "center",
         paddingTop: "10px",
       }}
     >
@@ -48,6 +51,7 @@ function ImageManipulation() {
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden",
+          backgroundColor: bgColor, 
         }}
       >
         <img
@@ -56,7 +60,7 @@ function ImageManipulation() {
             transform: `rotate(${rotate}deg)`,
             height: `${height}px`,
             width: `${width}px`,
-            transition: "transform 0.5s, height 0.5s, width 0.5s", 
+            transition: "transform 0.5s, height 0.5s, width 0.5s",
           }}
           alt="cat"
         />

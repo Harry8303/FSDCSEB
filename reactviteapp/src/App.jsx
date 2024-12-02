@@ -1,7 +1,11 @@
 import React from 'react'
 import Student from './Student';
-// import UseStudentState from './UserStudentState';
-import ImgManipulate from './imgmanipulate';
+// import UseStudentState from './UseStudentState';
+import Imagemanipulation from './Imagemanipulation';
+import MyUseEffect from './MyUseEffect';
+import UseFetchAPI from './UseFetchAPI';
+import Login from './login';
+// import Registration from './Registration';
 function App()
 {
   const h1=<h1>hello world</h1>;
@@ -33,8 +37,14 @@ function App()
   
 ]
   return (
-    <div><h2>hello using use statement</h2>
-    <ImgManipulate></ImgManipulate>
+    <div ><h2>hello using use statement</h2>
+    {/* <div><UseStudentState /></div> */}
+    {/* <Imagemanipulation></Imagemanipulation> */}
+    {/* <MyUseEffect /> */}
+    {/* <UseFetchAPI /> */}
+    {/* { <Login />} */}
+
+    {<Registration />}
     </div>
     
 
