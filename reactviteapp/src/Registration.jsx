@@ -14,7 +14,7 @@ const[userdata,setuserdata]=useState();
       password
     }
     regData(data);
-    //setuserdata(data);
+  
   }
   return (
     <div>

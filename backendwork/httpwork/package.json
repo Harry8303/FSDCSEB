@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "httpserver.js",
   "scripts": {
-    "start":"nodemon httpserver.js",
+    "start":"nodemon fsandhttp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

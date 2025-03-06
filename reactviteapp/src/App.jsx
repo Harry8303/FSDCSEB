@@ -1,43 +1,42 @@
 import React, { useState } from 'react'
-import Student from './Student';
-import UseStudentState from './UseStudentState';
-import Imagemanipulation from './Imagemanipulation';
-import MyUseEffect from '../MyUseEffect';
-import UseFetchAPI from './UseFetchAPI';
-import Login from './login';
+// import Student from './Student';
+// import UseStudentState from './UseStudentState';
+// import Imagemanipulation from './Imagemanipulation';
+// import MyUseEffect from '../MyUseEffect';
+// import UseFetchAPI from './UseFetchAPI';
+import Login from './Login';
 import Registration from './registration';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import MainLayout from './MainLayout';
+import Dashboard from './Dashboard';
 function App() {
 
   const[rdata,setrdata]=useState();
-  const h1=<h1>Hello World</h1>;
- const mystyle={
-  color:'red',
-  backgroundColor:'yellow'
- }
+  
+ 
 
 
  
   return (
     <div>
-      <div>
-        {JSON.stringify(rdata)}
-      </div>
-   <h2>Hello Using useSatte Hook</h2>
-  <div>
-    {/* <Login /> */}
-    <Registration regData={setrdata} />
-    {/* <UseStudentState /> */}
-    {/* <Imagemanipulation /> */}
-    {/* <MyUseEffect /> */}
-    {/* <UseFetchAPI /> */}
-    {/* <Login /> */}
-  <div>
-    <h2>Login Form</h2>
-    <Login regdata={rdata} />
+      {JSON.stringify(rdata)}
+  <BrowserRouter>
+  <Routes>
+ <Route path='/' element={<MainLayout />} >   
+ <Route path='/login' element={ <Login regdata={rdata} />} />
+<Route path='/registration' element={<Registration regData={setrdata} />} />
+</Route>
+
+<Route path='/dashboard' element={<Dashboard/>} />
+
+  </Routes>
+  </BrowserRouter>
+
+
+      
+ 
+  
   </div>
-   
-  </div>
-    </div>
       
   )
 }
